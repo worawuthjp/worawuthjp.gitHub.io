@@ -1,0 +1,42 @@
+<!-- Navbar -->
+<nav class="bg-primary text-white shadow-md fixed w-full top-0">
+  <div class="container mx-auto flex items-center justify-between px-4 py-3">
+    <!-- Logo -->
+    <a href="#" class="text-2xl font-bold"><img src="/assets/logo/WB.png" class="h-14" alt="Worawut Blog Logo" /></a>
+
+    <!-- Menu -->
+    <div class="hidden space-x-2 md:flex">
+      <a href="/" class="rounded-md px-2 py-1 transition hover:bg-[#000000]">Home</a>
+      <a href="#" class="rounded-md px-2 py-1 transition hover:bg-[#000000]">Blog</a>
+      <a href="#" class="rounded-md px-2 py-1 transition hover:bg-[#000000]">About</a>
+      <a href="#" class="rounded-md px-2 py-1 transition hover:bg-[#000000]">Contact Me</a>
+      <a href="#" class="rounded-md px-2 py-1 transition hover:bg-[#000000]">Products</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="flex items-center text-white focus:outline-none md:hidden" id="menu-toggle">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="hidden bg-rose-900 md:hidden" id="mobile-menu">
+    <a href="/" class="block px-4 py-2 hover:bg-rose-900">Home</a>
+    <a href="#" class="block px-4 py-2 hover:bg-rose-900">Blog</a>
+    <a href="#" class="block px-4 py-2 hover:bg-rose-900">About</a>
+    <a href="#" class="block px-4 py-2 hover:bg-rose-900">Contact Me</a>
+    <a href="#" class="block px-4 py-2 hover:bg-rose-900">Products</a>
+  </div>
+</nav>
+
+<script>
+  // Mobile Menu Toggle
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "worawut-blog",
+  "version": "1.0.0",
+  "description": "bundle exec jekyll serve",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx @tailwindcss/cli -i ./global.css -o ./assets/css/tailwind.css --watch",
+    "dev": "concurrently \"npm run build:css\" \"bundle exec jekyll serve\"",
+    "build": "tailwindcss -i ./global.css -o ./assets/css/tailwind.css && bundle exec jekyll build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "prettier-plugin-tailwindcss": "^0.6.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

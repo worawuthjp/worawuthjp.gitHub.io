@@ -379,6 +379,7 @@
     );
     --color-red: #b11d0f;
     --color-primary: var(--color-red);
+    --color-black-100: #545454;
   }
 }
 @layer base {
@@ -835,8 +836,8 @@
   .h-17 {
     height: calc(var(--spacing) * 17);
   }
-  .h-48 {
-    height: calc(var(--spacing) * 48);
+  .h-20 {
+    height: calc(var(--spacing) * 20);
   }
   .h-80 {
     height: calc(var(--spacing) * 80);
@@ -882,6 +883,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
   }
   .w-65 {
     width: calc(var(--spacing) * 65);
@@ -1034,6 +1038,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pan-down {
     --tw-pan-y: pan-down;
@@ -1411,10 +1418,16 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-x-3 {
+    column-gap: calc(var(--spacing) * 3);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
     }
+  }
+  .gap-y-2 {
+    row-gap: calc(var(--spacing) * 2);
   }
   .space-x-2 {
     :where(& > :not(:last-child)) {
@@ -1614,6 +1627,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
@@ -1745,6 +1761,9 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-black\/50 {
     background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
@@ -2044,6 +2063,10 @@
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
@@ -2054,6 +2077,10 @@
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
+  }
+  .font-\[100\] {
+    --tw-font-weight: 100;
+    font-weight: 100;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -2123,6 +2150,9 @@
   .whitespace-pre-wrap {
     white-space: pre-wrap;
   }
+  .\!text-black-100 {
+    color: var(--color-black-100) !important;
+  }
   .\[color\:red\] {
     color: red;
   }
@@ -2134,6 +2164,9 @@
   }
   .text-black {
     color: var(--color-black);
+  }
+  .text-blue-800 {
+    color: var(--color-blue-800);
   }
   .text-gray-100 {
     color: var(--color-gray-100);

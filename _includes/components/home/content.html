@@ -1,17 +1,24 @@
 <div class="font-[AppFont-Secondary]  py-5">
-    <div class="text-2xl">New Update!</div>
+    <div class="text-2xl">{{ site.data.home.headers.recent_label }}</div>
     <div class="h-80 w-full bg-[#d1d1d1]"></div>
 </div>
 
 <div class="font-[AppFont-Secondary] py-5">
-    <div class="flex">
-        <div class="text-2xl">
-            หมวดหมู่ยอดฮิต
+    <div class="flex flex-col">
+        <div class="text-2xl w-full flex justify-between">
+            <div>หมวดหมู่ยอดฮิต</div>
+            <div><a href="categories"
+                    class="text-blue-800 font-bold text-sm font-[AppFont] underline">ดูหมวดหมู่ทั้งหมด</a></div>
         </div>
-        <div class="flex flex-nowrap">
-            <div>
-                <div class="w-full h-48 bg-orange-100"></div>
-            </div>
+        <div class="flex flex-nowrap gap-x-3">
+            {% for blogCategory in site.data.blog['categories'] %}
+            <button class="text-center flex flex-col items-center gap-y-2 cursor-pointer">
+                <div class="w-20 h-20 bg-orange-100 rounded-full"></div>
+                <div class="font-[AppFont] !text-black-100 font-[100] text-sm text-wrap">
+                    {{blogCategory.blogCategory.title }}
+                </div>
+            </button>
+            {% endfor %}
         </div>
     </div>
 </div>

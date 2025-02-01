@@ -1,0 +1,12 @@
+- name: Home
+  link: /
+- name: Profile
+  link: /profile
+- name: Blog
+  link: /blog
+- name: About
+  link: /about
+- name: Contact Me
+  link: /contact
+- name: Products
+  link: /products

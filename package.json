@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx @tailwindcss/cli -i ./global.css -o ./assets/css/tailwind.css --watch",
-    "dev": "concurrently \"npm run build:css\" \"bundle exec jekyll serve\"",
+    "dev": "bundle exec jekyll serve",
     "build": "tailwindcss -i ./global.css -o ./assets/css/tailwind.css && bundle exec jekyll build"
   },
   "keywords": [],
@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.0",
-    "tailwindcss": "^4.0.0"
+    "@tailwindcss/postcss": "^4.0.2",
+    "postcss": "^8.5.1",
+    "tailwindcss": "^4.0.2"
   }
 }
